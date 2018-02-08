@@ -24,6 +24,8 @@ import java.util.Scanner;
 
 import android.net.Uri;
 
+import android.util.Log;
+
 /**
  * These utilities will be used to communicate with the weather servers.
  */
@@ -84,6 +86,9 @@ public final class NetworkUtils {
         catch (MalformedURLException e) {
             e.printStackTrace();
         }
+
+        Log.v(TAG, "Built URI " + url);
+
         return url;
     }
 
